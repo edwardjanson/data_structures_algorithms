@@ -25,6 +25,8 @@ public class Main {
         myLinkedList.removeFirst();
         getLinkedListInfo(myLinkedList);
 
+        System.out.println("get returns " + myLinkedList.get(1).value);
+
         System.out.println("\nLinked List:");
         myLinkedList.printList();
     }
