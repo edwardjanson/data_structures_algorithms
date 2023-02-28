@@ -28,6 +28,8 @@ public class Main {
         myLinkedList.set(1, 9);
         getLinkedListInfo(myLinkedList);
 
+        myLinkedList.insert(1, 7);
+
         System.out.println("get returns " + myLinkedList.get(1).value);
 
         System.out.println("\nLinked List:");
