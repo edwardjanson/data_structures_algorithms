@@ -19,6 +19,8 @@ public class Main {
         myQueue.enqueue(3);
         getQueueInfo(myQueue);
 
+        myQueue.dequeue();
+
         System.out.println("\nQueue:");
         myQueue.printQueue();
     }
