@@ -19,6 +19,10 @@ public class Main {
         myDLL.append(2);
         getDoublyLinkedListInfo(myDLL);
 
+        myDLL.removeLast();
+        getDoublyLinkedListInfo(myDLL);
+
+
         System.out.println("\nDoubly Linked List:");
         myDLL.printList();
     }
