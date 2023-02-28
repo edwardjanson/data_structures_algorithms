@@ -1,6 +1,4 @@
-package doubly_linked_lists;
-
-import linked_list.LinkedList;
+package doubly_linked_list;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package doubly_linked_lists;
+package doubly_linked_list;
 
 public class DoublyLinkedList {
 
