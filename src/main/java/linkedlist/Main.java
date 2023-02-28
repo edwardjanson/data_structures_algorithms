@@ -33,10 +33,11 @@ public class Main {
         System.out.println("get returns " + myLinkedList.get(1).value);
 
         myLinkedList.remove(1);
+        myLinkedList.insert(1, 5);
+        myLinkedList.reverse();
 
         System.out.println("\nLinked List:");
         myLinkedList.printList();
     }
-
 }
 
