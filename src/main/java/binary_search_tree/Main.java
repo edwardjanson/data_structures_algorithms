@@ -6,6 +6,14 @@ public class Main {
 
         BinarySearchTree myBST = new BinarySearchTree();
 
-        myBST.getRoot();
+        myBST.insert(5);
+        myBST.insert(10);
+        myBST.insert(6);
+        myBST.insert(8);
+        myBST.insert(17);
+
+        System.out.println(myBST.getRoot().value);
+
+        System.out.println(myBST.getRoot().right.left.right.value);
     }
 }
