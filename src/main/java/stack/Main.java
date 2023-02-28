@@ -18,6 +18,8 @@ public class Main {
         myStack.push(3);
         getStackInfo(myStack);
 
+        myStack.pop();
+
         System.out.println("\nStack:");
         myStack.printStack();
     }
