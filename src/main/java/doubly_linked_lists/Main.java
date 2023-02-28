@@ -37,6 +37,8 @@ public class Main {
 
         System.out.println(myDLL.get(2).value);
 
+        myDLL.remove(2);
+
         System.out.println("\nDoubly Linked List:");
         myDLL.printList();
     }
