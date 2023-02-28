@@ -32,6 +32,9 @@ public class Main {
         myDLL.set(2, 3);
         getDoublyLinkedListInfo(myDLL);
 
+        myDLL.insert(2, 5);
+        getDoublyLinkedListInfo(myDLL);
+
         System.out.println(myDLL.get(2).value);
 
         System.out.println("\nDoubly Linked List:");

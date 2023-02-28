@@ -20,7 +20,7 @@ public class DoublyLinkedList {
         Node newNode = new Node(value);
         this.head = newNode;
         this.tail = newNode;
-        length = 1;
+        this.length = 1;
     }
 
     public void printList() {
@@ -61,7 +61,7 @@ public class DoublyLinkedList {
             newNode.prev = this.tail;
             this.tail = newNode;
         }
-        length++;
+        this.length++;
     }
 
     public Node removeLast() {
@@ -75,7 +75,7 @@ public class DoublyLinkedList {
             this.tail.next = null;
             temp.prev = null;
         }
-        length--;
+        this.length--;
         return temp;
     }
 
@@ -89,7 +89,7 @@ public class DoublyLinkedList {
             newNode.next = this.head;
             this.head = newNode;
         }
-        length++;
+        this.length++;
     }
 
     public Node removeFirst() {
@@ -104,7 +104,7 @@ public class DoublyLinkedList {
             this.head.prev = null;
             temp.next = null;
         }
-        length--;
+        this.length--;
         return temp;
     }
 
@@ -131,5 +131,27 @@ public class DoublyLinkedList {
             return true;
         }
         return false;
+    }
+
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) return false;
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+        if (index == this.length) {
+            append(value);
+            return false;
+        }
+
+        Node newNode = new Node(value);
+        Node before = get(index - 1);
+        Node after = before.next;
+        before.next = newNode;
+        newNode.prev = before;
+        after.prev = newNode;
+        newNode.next = after;
+        this.length++;
+        return true;
     }
 }
