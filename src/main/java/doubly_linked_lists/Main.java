@@ -22,6 +22,8 @@ public class Main {
         myDLL.removeLast();
         getDoublyLinkedListInfo(myDLL);
 
+        myDLL.prepend(1);
+        getDoublyLinkedListInfo(myDLL);
 
         System.out.println("\nDoubly Linked List:");
         myDLL.printList();
