@@ -16,5 +16,7 @@ public class Main {
 
         System.out.println(myHashTable.get("lumber"));
         System.out.println(myHashTable.get("cement"));
+
+        System.out.println(myHashTable.keys());
     }
 }
