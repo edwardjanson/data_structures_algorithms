@@ -91,4 +91,20 @@ public class DoublyLinkedList {
         }
         length++;
     }
+
+    public Node removeFirst() {
+        if (this.length == 0) return null;
+
+        Node temp = this.head;
+        if (this.length == 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.head = this.head.next;
+            this.head.prev = null;
+            temp.next = null;
+        }
+        length--;
+        return temp;
+    }
 }
