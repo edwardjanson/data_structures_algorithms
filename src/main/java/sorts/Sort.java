@@ -1,5 +1,7 @@
 package sorts;
 
+import java.util.Arrays;
+
 public class Sort {
 
     public static void bubbleSort(int[] array) {
@@ -73,5 +75,14 @@ public class Sort {
         }
 
         return combined;
+    }
+
+    public static int[] mergeSort(int[] array) {
+        if (array.length == 1) return array;
+        int midIndex = array.length / 2;
+        int[] left = mergeSort(Arrays.copyOfRange(array, 0, midIndex));
+        int[] right = mergeSort(Arrays.copyOfRange(array, midIndex, array.length));
+
+        return merge(left, right);
     }
 }

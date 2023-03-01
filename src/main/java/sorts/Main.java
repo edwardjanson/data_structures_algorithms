@@ -22,5 +22,9 @@ public class Main {
         int[] array2 = {4, 5, 8, 11, 15};
         int[] arraySorted = Sort.merge(array1, array2);
         System.out.println(Arrays.toString(arraySorted));
+
+        int[] mergeSortArray = {3, 8, 4, 12, 9};
+        int[] arraySorted2 = Sort.mergeSort(mergeSortArray);
+        System.out.println(Arrays.toString(arraySorted2));
     }
 }
