@@ -8,7 +8,8 @@ public class Main {
 
         myBST.rInsert(5);
         myBST.rInsert(10);
-        myBST.rInsert(6);
+        myBST.rInsert(7);
+        myBST.rInsert(12);
         myBST.rInsert(8);
         myBST.rInsert(17);
 
@@ -17,6 +18,9 @@ public class Main {
         System.out.println(myBST.rContains(6));
         System.out.println(myBST.rContains(11));
         System.out.println(myBST.rContains(8));
+
+        myBST.deleteNode(10);
+        System.out.println(myBST.getRoot().right.value);
 
         System.out.println(myBST.getRoot().right.left.right.value);
     }
