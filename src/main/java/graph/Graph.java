@@ -36,4 +36,16 @@ public class Graph {
         }
         return false;
     }
+
+    public boolean removeVertex(String vertex) {
+        if (adjList.get(vertex) != null) {
+            ArrayList<String> vertexList = adjList.get(vertex);
+            for (String otherVertex : vertexList) {
+                adjList.get(otherVertex).remove(vertex);
+            }
+            adjList.remove(vertex);
+            return true;
+        }
+        return false;
+    }
 }

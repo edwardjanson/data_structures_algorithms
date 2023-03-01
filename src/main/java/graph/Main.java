@@ -19,5 +19,8 @@ public class Main {
 
         myGraph.printGraph();
 
+        myGraph.removeVertex("B");
+
+        myGraph.printGraph();
     }
 }
