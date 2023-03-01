@@ -18,30 +18,21 @@ public class RecursiveBinarySearchTree {
         return this.root;
     }
 
-    public boolean insert(int value) {
-        Node newNode = new Node(value);
-        if (this.root == null) {
-            this.root = newNode;
-            return true;
-        }
+    private Node rInsert(Node currentNode, int value) {
+        if (currentNode == null) return new Node(value);
 
-        Node temp = this.root;
-        while (true) {
-            if (newNode.value == temp.value) return false;
-            if (newNode.value < temp.value) {
-                if (temp.left == null) {
-                    temp.left = newNode;
-                    return true;
-                }
-                temp = temp.left;
-            } else {
-                if (temp.right == null) {
-                    temp.right = newNode;
-                    return true;
-                }
-                temp = temp.right;
-            }
+        if (value == currentNode.value) return null;
+        if (value < currentNode.value) {
+            currentNode.left = rInsert(currentNode.left, value);
+        } else {
+            currentNode.right = rInsert(currentNode.right, value);
         }
+        return currentNode;
+    }
+
+    public void rInsert(int value) {
+        if (this.root == null) root = new Node(value);
+        rInsert(this.root, value);
     }
 
     private boolean rContains(Node currentNode, int value) {

@@ -6,11 +6,11 @@ public class Main {
 
         RecursiveBinarySearchTree myBST = new RecursiveBinarySearchTree();
 
-        myBST.insert(5);
-        myBST.insert(10);
-        myBST.insert(6);
-        myBST.insert(8);
-        myBST.insert(17);
+        myBST.rInsert(5);
+        myBST.rInsert(10);
+        myBST.rInsert(6);
+        myBST.rInsert(8);
+        myBST.rInsert(17);
 
         System.out.println(myBST.getRoot().value);
 
