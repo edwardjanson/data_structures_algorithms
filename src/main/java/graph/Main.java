@@ -8,9 +8,16 @@ public class Main {
 
         myGraph.addVertex("A");
         myGraph.addVertex("B");
+        myGraph.addVertex("C");
 
         myGraph.addEdge("A", "B");
+        myGraph.addEdge("B", "C");
 
         myGraph.printGraph();
+
+        myGraph.removeEdge("B", "C");
+
+        myGraph.printGraph();
+
     }
 }
