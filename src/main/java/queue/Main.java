@@ -1,6 +1,4 @@
-package Queue;
-
-import linked_list.LinkedList;
+package queue;
 
 public class Main {
 
